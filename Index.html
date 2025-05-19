@@ -1,0 +1,90 @@
+# LOCKERAPL-<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite Especial 💌</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #a3005b;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .heart {
+      font-size: 80px;
+      animation: pulse 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e754a1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .response {
+      margin-top: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">💕</div>
+  <h1>Oi, gostoso...</h1>
+  <p>Que tal retirar a sua encomenda e ter um date gostoso comigo? 😈</p>
+  <p><strong>📍 Local:</strong> Algum lugar com cervejinha e depois meu quarto 😛<br>
+     <strong>🕒 Horário:</strong> A definir</p>
+
+  <div class="buttons">
+    <button class="btn" onclick="responder(true)">SIM, eu topo 😍</button>
+    <button class="btn" onclick="responder(false)">Não vai dar 😢</button>
+  </div>
+
+  <div class="response" id="resposta"></div>
+
+  <script>
+    function responder(topou) {
+      const resposta = document.getElementById('resposta');
+      if (topou) {
+        resposta.innerText = "Já tô escolhendo a roupa... e a lingerie pra tirares 😏✨";
+      } else {
+        resposta.innerText = "Poxa... então vou ficar com saudade 😔";
+      }
+      resposta.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
