@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite Especial😏 💌</title>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .heart {
+      font-size: 80px;
+      animation: pulse 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e754a1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .response {
+      margin-top: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .audio-player {
+      position: absolute;
+      left: -9999px;
+    }
+
+    #lockscreen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #lockscreen input {
+      padding: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+    }
+
+    #lockscreen button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #lockscreen button:hover {
+      background-color: #e754a1;
+    }
+  </style>
+</head>
+<body>
+  <div id="lockscreen">
+    <h2>🔒 Insira a senha para acessar:</h2>
+    <input type="password" id="senha" placeholder="Digite a senha" />
+    <button onclick="verificarSenha()">Entrar</button>
+    <p id="erro" style="color: red; display: none;">Senha incorreta! 😢</p>
+  </div>
+
+  <div class="heart">💕</div>
+  <h1>Oi, gostoso...</h1>
+  <p>Que tal retirar a tua encomenda e ter um sexo gostoso comigo? 😈</p>
+  <p><strong>📍 Local:</strong> Algum lugar com cervejinha e depois o meu quarto 😛<br>
+     <strong>🕒 Horário:</strong> A definir</p>
+
+  <div class="buttons">
+    <button class="btn" onclick="responder(true)">SIM, eu topo 😍</button>
+    <button class="btn" onclick="responder(false)">Não vai dar 😢</button>
+  </div>
+
+  <div class="response" id="resposta"></div>
+
+  <iframe class="audio-player" width="0" height="0"
+    src="https://www.youtube.com/embed/waU75jdUnYw?autoplay=1&loop=1&playlist=waU75jdUnYw"
+    frameborder="0" allow="autoplay"></iframe>
+
+  <script>
+    function responder(topou) {
+      const resposta = document.getElementById('resposta');
+      if (topou) {
+        resposta.innerText = "Já tô escolhendo a roupa... e a lingerie pra tirares 😏✨";
+      } else {
+        resposta.innerText = "Poxa... então vou ficar com saudade 😔";
+      }
+      resposta.style.display = 'block';
+    }
+
+    function verificarSenha() {
+      const senha = document.getElementById('senha').value;
+      const erro = document.getElementById('erro');
+      if (senha === "69") {
+        document.getElementById('lockscreen').style.display = 'none';
+      } else {
+        erro.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
